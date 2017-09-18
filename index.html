@@ -2,19 +2,78 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<title>self-introduction</title>
   <link rel="stylesheet" href="typicons.min.css">
 	<style>
-  @font-face {
-  font-family: 'typicons';
-  src: url('typicons.eot');
-  src: url('typicons.eot?#iefix') format('embedded-opentype'),
-       url('typicons.woff') format('woff'),
-       url('typicons.ttf') format('truetype'),
-       url('typicons.svg#typicons') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
+    @font-face {
+    font-family: 'typicons';
+    src: url('typicons.eot');
+    src: url('typicons.eot?#iefix') format('embedded-opentype'),
+         url('typicons.woff') format('woff'),
+         url('typicons.ttf') format('truetype'),
+         url('typicons.svg#typicons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    }
+    @media screen and (min-width: 958px){
+      .menu-button,.menu-button-checkbox{
+        display: none;
+      }
+      .header_p{
+      margin-top: 200px;
+      margin-left:30px;
+      font-size: 30px;
+      line-height: 60px;
+      } 
+    }
+    @media screen and (max-width: 957px){
+      .header_p{
+        margin-top: 60px;
+        margin-left: 30px;
+        font-size: 15px;
+        line-height: 2em;
+      }
+      .menu-button{
+        float: left;
+        font-size: 30px;
+        line-height: 40px;
+        background: transparent;
+        padding:0 15px;
+        border:0;
+      }
+      .menu-button-checkbox{
+        top: 0; 
+        left: 9px;
+        background:transparent;
+        width: 50px;
+        height: 40px;
+        position: fixed;
+        opacity: 0;
+      }
+      .menu-button-checkbox:checked ~ .navation{
+        display: block;
+      }
+      .nav ul{
+        display: none;
+        top: 50px;
+        width: 100px;
+        left: 0;
+        position: fixed;
+        margin-top: 0;
+        padding-left: 0;
+        border-radius: 3px;
+      }
+      .nav ul li {
+        border: 0;
+        border-radius: 2px;
+        display: block;
+        background-color: black;
+      }
+      .body{
+        width: 100%;
+      }
+    }
 		body{
 			padding: 0;
 			margin: 0;
@@ -34,9 +93,7 @@
       color: white;
       margin-left:10px;
     }
-    .nav ul{
-      height: 45px;
-      width: 500px;
+    .nav ul{      
       margin-top: 0;
       padding-top: 5px;
       float: right;
@@ -65,18 +122,13 @@
     }
 		.header{
 			background:url(images/body_header.jpg)  no-repeat center center;
-			height: 500px;
-			background-size: cover;
-			margin:50 auto;
+      background-size: cover;
+      width: 100%;
 			border:white solid 1px;
 		}
 		.header_p{
-			margin-top: 200px;
-      margin-left:30px; 
-			width: 800px;
+			width: 50%;
 			color: #666666;
-      font-size: 30px;
-      line-height: 60px;
 		}
 		.header_p p span{
 			display: block;
@@ -188,8 +240,11 @@
 </head>
 <body>
   <div class="nav">
-    <span class="typcn typcn-th-list-outline"></span>
-    <ul>
+    <button type="button" class="menu-button">
+      <span class="typcn typcn-th-list-outline"></span>
+    </button>
+    <input type="checkbox" class="menu-button-checkbox">
+    <ul class="navation">
       <li><a href="#">HOME</a></li>
       <li><a href="#">SKILL</a></li>
       <li><a href="#">Lorem.</a></li>
@@ -210,25 +265,39 @@
 			<div class="con_now">
 				<h3>破釜沉舟</h3>
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus distinctio, vitae quae tempore provident eum similique error dolore sint impedit accusamus culpa laudantium id necessitatibus in illum animi repudiandae maiores! Rerum cupiditate, doloribus omnis delectus natus, incidunt ad qui laboriosam, necessitatibus fugit facere sequi, rem vel odit eos optio! Quibusdam.
+					從退伍至今，歷時兩年，說來沮喪，因為當初念研究所前給自己的期許，未能實踐，有太多的偷懶與不努力。
+          碩一在入學時，給自己設下了停損點，人生沒太多的機會重來，如果目標無法達成，那也沒什麼好留戀的。不願自己再像大學那樣，等時間到後，領了張畢業證書，離開學校，才發現自己依然沒有長進，那倒不如果斷離開。直接專心自己想要學習的。
+				</p>
+				<p>
+					這次將會是最後一次，向命運揮拳。無論結果如何，都將全力以赴，不再後悔。
 				</p>
 			</div>
 			<div class="con_2015">
 				<h3>熱血瘋狂</h3>
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quas tenetur, vitae beatae modi ratione eos hic quidem illo sequi perspiciatis doloribus nemo, fugiat. Harum eum corrupti quia. Aut neque maxime, a doloribus harum facilis eveniet quidem asperiores doloremque vitae.
+					在經歷大三的挫折與種種不如意，開始想改變自己。
+					漸漸地，開始閱讀商周、天下等雜誌，然後看傳記、心理學、小說等書，也是在這時養成寫日記跟跑步的習慣，讓自己不同於過往。
+					影響最深的，應該是加入龍舟隊社。對於其他運動而言，龍舟不算有趣，練一整學期的體能，在船上划槳的時間，僅有短短兩星期。
+					之所以會留下，是因為同儕吧。雖然枯燥乏味，但隊員間總是鼓勵著彼此，是一個很有向心力的團隊，跟隊友間相處也十分融洽。
+					後來還跟另外三名隊員一起去騎腳踏車環島，那段真的是人生最快樂的時光。很多好朋友的是在這期間遇到的。
+
+          退伍後，還跟學長、同梯，一起去爬山...待續
 				</p>
 			</div>
 			<div class="con_2012">
 				<h3>糜爛放縱</h3>
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor architecto labore vero rem tenetur amet maxime libero minus necessitatibus sint ad, ea corporis ab doloribus, expedita praesentium officia culpa nostrum nisi explicabo nam quaerat! Eius commodi ut laudantium rerum laborum esse doloremque ipsum necessitatibus explicabo consequatur eos incidunt autem id reiciendis, nesciunt sit molestiae neque earum eveniet aliquam, debitis reprehenderit.
+					從高中畢業以後，對一個以前都在補習班度過的學生來說。
+					發現自己突然擁有很多時間，但對一個一天到晚都在補習的學生來說，根本不知如何分配時間，於是就一直做著輕鬆、自己喜歡做的事，打電動、飆車、睡覺等等，把自己應該最青春的時間，花在一堆沒有意義的東西上。課也翹掉一大半，快被當的話就退選，等等，過著最廢的人生。到了大三時甚至比高中的自己還不如。
 				</p>
 			</div>
 			<div class="con_2009">
-				<h3>教育荼毒</h3>
+				<h3>知識成長</h3>
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id maxime nobis totam mollitia eligendi quod ipsum, vel, architecto impedit est quisquam nesciunt commodi, voluptate debitis illo, tenetur quasi! Quo, repellendus.
+					許多基礎知識的學習。
+          補了很多補習班。
+          認識很多同學。
+          end。
 				</p>
 			</div>
 		</div>
