@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<title>self-introduction</title>
+  <title>index</title>
   <link rel="stylesheet" href="typicons.min.css">
-	<style>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
+  <style>
     @font-face {
     font-family: 'typicons';
     src: url('typicons.eot');
@@ -17,88 +19,39 @@
     font-style: normal;
     }
     @media screen and (min-width: 958px){
-      .menu-button,.menu-button-checkbox{
-        display: none;
-      }
-      .header_p{
-      margin-top: 200px;
-      margin-left:30px;
-      font-size: 30px;
-      line-height: 60px;
-      } 
+
     }
     @media screen and (max-width: 957px){
-      .header_p{
-        margin-top: 60px;
-        margin-left: 30px;
-        font-size: 15px;
-        line-height: 2em;
-      }
-      .menu-button{
-        float: left;
-        font-size: 30px;
-        line-height: 40px;
-        background: transparent;
-        padding:0 15px;
-        border:0;
-      }
-      .menu-button-checkbox{
-        top: 0; 
-        left: 9px;
-        background:transparent;
-        width: 50px;
-        height: 40px;
-        position: fixed;
-        opacity: 0;
-      }
-      .menu-button-checkbox:checked ~ .navation{
-        display: block;
-      }
-      .nav ul{
-        display: none;
-        top: 50px;
-        width: 100px;
-        left: 0;
-        position: fixed;
-        margin-top: 0;
-        padding-left: 0;
-        border-radius: 3px;
-      }
-      .nav ul li {
-        border: 0;
-        border-radius: 2px;
-        display: block;
-        background-color: black;
-      }
-      .body{
-        width: 100%;
-      }
+      
     }
-		body{
-			padding: 0;
-			margin: 0;
-			width: 100%;
+    body{
+      padding: 0;
+      margin: 0;
+      width: 100%;
       font-family: "儷黑 Pro", "標楷體";
       background-color: #EEFFBB;
+      border:white 1px solid;
     }
-    .nav{
+    .nav_head{
       position: fixed;
       height: 50px;
       width: 100%;
       background-color: black;
+      margin: 0;
+      z-index: 1;
     }
-    .nav span{
+    .nav_head span{
       height: 50px;
       font-size: 40px;
       color: white;
       margin-left:10px;
     }
-    .nav ul{      
+    .nav_head ul{      
       margin-top: 0;
       padding-top: 5px;
       float: right;
     }
-    .nav ul li{
+    .nav_head ul li{
       list-style: none;
       width: 80px;
       float: left;
@@ -109,214 +62,79 @@
       border-radius: 5px;
       margin-right: 15px;
     }
-    .nav ul li a{
+    .nav_head ul li a{
       text-decoration: none;
       color: white;
     }
-    .nav ul li:hover{
+    .nav_head ul li:hover{
       cursor: pointer;
     }
-    .nav span:hover{
+    .nav_head span:hover{
       font-size: 45px;
       cursor: pointer;
     }
-		.header{
-			background:url(images/body_header.jpg)  no-repeat center center;
-      background-size: cover;
+    .block{
+      margin:0 auto;
+      width: 960px; 
+      padding-top:100px;
+    }
+    .footer{
       width: 100%;
-			border:white solid 1px;
-		}
-		.header_p{
-			width: 50%;
-			color: #666666;
-		}
-		.header_p p span{
-			display: block;
-			float: right;
-		}
-		.intro{
-			width: 800px;
-			margin: 0 auto;
-			height: 150px;
-		}
-    .intro img{
-      width: 150px;
-      float: left;
+      background: black;
+      height: 50px;
+      text-align: center;
+      color:white;
+      padding-top: 5px;
     }
-    .intro img:hover{
-      transform:scale(5,5) translate(50px,0);
-    }
-    .intro .me{
-      display: inline-block;
-      width: 600px;
-      padding-top: 40px;
-      padding-left: 30px;
-      font-size: 20px;
-    }
-		.body{
-			background:url(images/background_bar.jpg) no-repeat center center;
-			height: 1600px;
-			width: 960px;
-			margin: 0 auto;
-		}
-		.content{
-			width: 810px;
-			display: inline-block;
-			height: 1600px;
-			float: left;
-		}
-    .content div{
-      height: 400px;
-    }
-    .content .now{
-      height:350px;
-    }
-    .content .con_2015{
-      height: 350px;
-    }
-    .content .con_2012{
-      height: 340px;
-
-    }
-    .content div h3{
-      padding-left: 10px;
-      color: #FFD740;
-      font-size: 36px;
-    }
-    .content div p{
-      color:#BBBB00;
-      padding-left: 15px;
-      font-size: 18px;
-      line-height: 30px;
-    }
-		.sidebar{
-			width:100px;
-			display: inline-block;
-			height: 1600px;
-			float: right;
-			border:1px hidden;
-			font-size: 20px;
-      color: white;
-		}
-		.now{
-			padding-top: 0;
-		}
-    .sidebar div{
-      padding-left: 10px;
-    }
-		.s_2015{
-			padding-top:340px;
-		}
-		.s_2012{
-			padding-top:375px;
-		}
-		.s_2009{
-			padding-top:370px;
-		}
-		.s_1991{
-			padding-top:300px;
-		}
-		.contact{
-			width: 400px;
-			margin: 0 auto;
-			height: 100px;
-		}
-    .contact img{
-      width: 50px;
-      padding:20px 10px;
-    }
-    .contact img:hover{
-      transform: scale(1.5, 1.5);
-    }
-		.footer{
-			width: 100%;
-			background: black;
-			height: 50px;
-			text-align: center;
-			color:white;
-			padding-top: 5px;
-		}
-	</style>
+  </style>
 </head>
 <body>
-  <div class="nav">
-    <button type="button" class="menu-button">
-      <span class="typcn typcn-th-list-outline"></span>
-    </button>
-    <input type="checkbox" class="menu-button-checkbox">
-    <ul class="navation">
-      <li><a href="#">HOME</a></li>
-      <li><a href="#">SKILL</a></li>
-      <li><a href="#">Lorem.</a></li>
-      <li><a href="#">Lorem.</a></li>
-    </ul>
+  <div class="header">
+    <div class="nav_head">
+      <button type="button" class="menu-button">
+        <span class="typcn typcn-th-list-outline"></span>
+      </button>
+      <input type="checkbox" class="menu-button-checkbox">
+      <ul class="navation">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="#">SKILL</a></li>
+        <li><a href="lift.html">Lift</a></li>
+        <li><a href="#">Lorem.</a></li>
+      </ul>
+    </div>
+    <div class="block">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active">
+            <img class="d-block img-fluid" src="images/part1.jpg" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block img-fluid" src="images/part2.jpg" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block img-fluid" src="images/part3.jpg" alt="Third slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
   </div>
-	<div class="header">
-		<div class="header_p">
-			<p>當你的才華還撐不起你的野心的時候，你就應該靜下心來學習；當你的能力還駕馭不了你的目標時，就應該沉下心來，歷練。<span>-莫言</span></p>
-		</div>
-	</div>
-	<div class="intro">
-    <img src="images/intro_big.png" alt="it's me">
-		<div class="me"><h3>－若無法成為第一，做過的努力，也都只是枉然</h3></div>
-	</div>
-	<div class="body">
-		<div class="content">
-			<div class="con_now">
-				<h3>破釜沉舟</h3>
-				<p>
-					從退伍至今，歷時兩年，說來沮喪，因為當初念研究所前給自己的期許，未能實踐，有太多的偷懶與不努力。
-          碩一在入學時，給自己設下了停損點，人生沒太多的機會重來，如果目標無法達成，那也沒什麼好留戀的。不願自己再像大學那樣，等時間到後，領了張畢業證書，離開學校，才發現自己依然沒有長進，那倒不如果斷離開。直接專心自己想要學習的。
-				</p>
-				<p>
-					這次將會是最後一次，向命運揮拳。無論結果如何，都將全力以赴，不再後悔。
-				</p>
-			</div>
-			<div class="con_2015">
-				<h3>熱血瘋狂</h3>
-				<p>
-					在經歷大三的挫折與種種不如意，開始想改變自己。
-					漸漸地，開始閱讀商周、天下等雜誌，然後看傳記、心理學、小說等書，也是在這時養成寫日記跟跑步的習慣，讓自己不同於過往。
-					影響最深的，應該是加入龍舟隊社。對於其他運動而言，龍舟不算有趣，練一整學期的體能，在船上划槳的時間，僅有短短兩星期。
-					之所以會留下，是因為同儕吧。雖然枯燥乏味，但隊員間總是鼓勵著彼此，是一個很有向心力的團隊，跟隊友間相處也十分融洽。
-					後來還跟另外三名隊員一起去騎腳踏車環島，那段真的是人生最快樂的時光。很多好朋友的是在這期間遇到的。
-
-          退伍後，還跟學長、同梯，一起去爬山...待續
-				</p>
-			</div>
-			<div class="con_2012">
-				<h3>糜爛放縱</h3>
-				<p>
-					從高中畢業以後，對一個以前都在補習班度過的學生來說。
-					發現自己突然擁有很多時間，但對一個一天到晚都在補習的學生來說，根本不知如何分配時間，於是就一直做著輕鬆、自己喜歡做的事，打電動、飆車、睡覺等等，把自己應該最青春的時間，花在一堆沒有意義的東西上。課也翹掉一大半，快被當的話就退選，等等，過著最廢的人生。到了大三時甚至比高中的自己還不如。
-				</p>
-			</div>
-			<div class="con_2009">
-				<h3>知識成長</h3>
-				<p>
-					許多基礎知識的學習。
-          補了很多補習班。
-          認識很多同學。
-          end。
-				</p>
-			</div>
-		</div>
-		<div class="sidebar">
-			<div class="now"><span>now</span></div>
-			<div class="s_2015"><span>2015/09</span></div>
-			<div class="s_2012"><span>2012/12</span></div>
-			<div class="s_2009"><span>2009/09</span></div>
-			<div class="s_1991"><span>1991/08</span></div>
-		</div>
-	</div>
-	<div class="contact">
-		<a href="https://www.facebook.com/profile.php?id=100001629164231"><img src="images/facebook.png" alt="facebook"></a>
-    <a href="https://plus.google.com/u/0/100885145349801351590"><img src="images/gmail.png" alt="gmail"></a>
-    <a href="#"><img src="images/if_twitter_386736.png" alt="twitter"></a>
-    <a href="#"><img src="images/in.png" alt="linkin"></a>
-	</div>
-	<div class="footer">
-		<p>Copyright © by Huang Yu-Di</p>
-	</div>
+  <div class="intro">
+  </div>
+  <div class="body">
+  </div>
+  <div class="footer">
+    <p>Copyright © by Huang Yu-Di</p>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 </body>
 </html>
