@@ -18,6 +18,9 @@
     font-style: normal;
     }
     @media screen and (min-width: 993px){
+      .header{
+        height: 50px;
+      }
       input{
         display: none;
       }
@@ -64,8 +67,15 @@
         text-align: left;
         margin: 0 auto; 
       }
+      .footer > div{
+        width:80%;
+        margin:0 auto;
+      }
     }
     @media screen and (min-width:768px) and (max-width: 992px){
+      .header{
+        height: 50px;
+      }
       input{
         display: none;
       }
@@ -103,9 +113,16 @@
         display: inline-block;
         margin-left: 25px;
       }
+      .footer > div{
+        width:80%;
+        margin:0 auto;
+      }
 
     }
     @media screen and (max-width: 767px) and (min-width: 481px){
+      .header{
+        height: 50px;
+      }
       .nav{
         display: none;
         top: 0px;
@@ -165,12 +182,22 @@
       .right ul li, .left ul li{
         margin-left: 25px;
       }
+      .footer > div{
+        width:80%;
+        margin:0 auto;
+      }
     }
     @media screen and (max-width: 480px){
+      .header{
+        height: 35px;
+      }
+      .typcn {
+        font-size: 30px;
+      }
       .nav{
         display: none;
-        top: 0px;
-        left: 50px;
+        top: 35px;
+        left: 0px;
         position: fixed;
         margin: 0;
         padding: 0;
@@ -182,7 +209,6 @@
        }
       .navation li{
         padding:10px;
-        float: left;
       }
       .navation li a{
         text-decoration: none;
@@ -203,13 +229,14 @@
       #skill{
         background:url(images/skill_bg_small.jpg) center center no-repeat;
         padding-left: 35px;
-        padding-top: 25px;
+        padding-top: 5px;
       }
       .left, .right{
         display: block;
       }
       .left ul, .right ul{
-
+        margin: 0;
+        padding: 0;
       }
       .left{
         height: 30%;
@@ -223,7 +250,11 @@
         float: left;
       }
       .right ul li, .left ul li{
-        margin-left: 25px;
+        margin: 0;
+        padding: 0;
+      }
+      .my_learning div p{
+        font-size: 20px;
       }
 
     }
@@ -231,14 +262,12 @@
       height: 100%;
       margin:0;
       background-color: white;
+      overflow-x: hidden;
     }
     .header{
       background-color:white;
-      display: relative;
       position: fixed;
-      height: 50px;
       width: 100%;
-      z-index: 1;
     }
     .button{
       float: left;
@@ -296,21 +325,46 @@
       font-size: 24px;
     }
 
-    #person, #learn{
+    #person{
       height: 100vh;
       width: 100%;
       background-color: #f4f4f4;
       padding-top: 50px;
     }
+    #learn{
+      width: 100%;
+      background-color: #f4f4f4;
+      padding-top: 50px;
+    }
     .my_learning{
-      padding-left: 35px;
+      padding:0 35px;
     }
     .my_learning p{
       font-size: 24px;
       line-height: 1.5em;
     }
+    .my_learning p a{
+      text-decoration: none;
+      color: #888888;
+    }
+    .my_learning p a:hover{
+      color: #444444;
+    }
     .footer{
       background-color:#AAAAAA;
+      width: 100%
+    }
+    
+    .connect{
+      float: right;
+    }
+    .connect img{
+      width: 30px;
+      margin: 5px 3px;
+    }
+    .infor p{
+      display: inline-block;
+      padding-left: 10px;
     }
   </style>
 </head>
@@ -324,8 +378,8 @@
         <div class="nav">
           <div class="logo"></div>
           <ul class="navation">
-            <li><a href="#home">HOME</a></li>
-            <li><a href="#skill">SKILL</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skill">Skill</a></li>
             <li><a href="#person">Personality</a></li>
             <li><a href="#learn">Learning</a></li>
           </ul>
@@ -363,7 +417,7 @@
               </ul>
             </div>
             <div>
-              <h3> 未來目標 </h3>
+              <h3> 目標 </h3>
               <h6>(成為全端工程師)</h6>
               <ul>
                 <li>Ruby on rails</li>
@@ -377,21 +431,45 @@
       <div id="learn">
         <div class="my_learning">
           <h1>網頁學習歷程</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, assumenda perspiciatis, adipisci impedit magnam vitae eligendi in explicabo at. Dolore recusandae veritatis iste vero perspiciatis est nobis consequuntur architecto, similique!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta sunt suscipit ducimus cupiditate pariatur enim, libero consectetur! Eius laudantium, saepe, unde harum earum dolorum iure illum in culpa quisquam reiciendis necessitatibus, consequatur odit vero assumenda!
-          </p>
+          <h3>Html、Css</h3>
+          <div>
+            <p>
+              自己是從html、css開始接觸網頁前端，剛開始不太清楚到底在做什麼，是用<a href="https://www.codecademy.com/">codecademy</a>來學，慢慢了解這些怎麼用。
+              課程學完後，開始上網找靜態網頁的範例，看看別人怎麼寫，然後跟著做。照別人規劃好的版型去做，不難，對我而且，最難的是自己從無到有，把整個網頁設計出來...所以後來花很多時間，讀色彩學、版面設計(UX/UI)的文章。直到現在，常常還是覺得...自己設計網頁，還是有點不好看..但又不知道該改哪邊..
+            </p>
+          </div>
+          <h3>Javascript、JQuery</h3>
+          <div>
+            <p>
+              之後學習Javascript，憑著一股傻勁，買了一本1000多頁的<a href="http://www.books.com.tw/products/0010542183">犀牛書</a>，花3個月，努力從第一頁翻到最後一頁，看完跟懂是兩回事...但至少對於Javascript有點基礎的概念(
+              目前是當工具書使用，有不懂的地方，除了上網看以外，還會回去翻閱)。也開始學JQuery，看API學習如何使用，第一次用JQuery學習完整的應用過程是看<a href="https://www.youtube.com/channel/UCBtnDlIaC0FlAPF4bTEI9RQ">主角日常</a>的網頁教學，照著步驟做，寫完再用自己的想法寫一遍，覺得很有成就感。於是自己設計貪食蛇遊戲，用類似的概念，花了將近一個月的時間，寫完第二個網頁遊戲<a href="https://morriedig.github.io/snake_game/">貪食蛇</a>，過程中，先想完流程，看看有那些method可以用，或function要怎麼寫，很多細節，都讓我傷透腦筋，還在網路上看大家怎麼做的，最後很高興，終於被我完成了!
+            </p>
+          </div>
+          <h3>Alpha Camp</h3>
+          <div>
+            <p>
+              因為，貪食蛇遊戲，覺得自己浪費很多時間，常常因為簡單的基礎觀念不懂，而卡很久。所以報名了Alpha Camp課程，希望能加深自己的基礎，順便檢視自己之前是否都理解正確。
+              目前，正為了朝全端網頁工程師邁進，還有很長一段路要走，希望能盡快抵達!!!
+            </p>
+          </div>
+
         </div>
       </div>
     </div>
    <!-- 連結+製作人 -->
     <div class="footer">
-      <p>Copyright © by Huang Yu-Di</p>   
-      <div class="connect">                     
-        
-      </div>
+      <div>
+        <div class="connect">                   
+          <a href="https://www.facebook.com/profile.php?id=100001629164231"><img src="images/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="images/if_twitter_386736.png" alt="Twitter"></a>
+          <a href="#"><img src="images/in.png" alt="In"></a>
+        </div>
+        <div class="infor">
+          <p>Copyright © by Huang Yu-Di</p> 
+          <p>Gmail: HuangYudi80@gmail.com</p>
+        </div>
+      </div>  
+      
     </div>
   </div>
 </body>
