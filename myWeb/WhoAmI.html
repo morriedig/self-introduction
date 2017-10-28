@@ -32,11 +32,26 @@
           </ul>
         </div>
         <div class="nav_icon">
-          <i class="fa fa-bars" aria-hidden="true"></i>
+          <i class="fa fa-bars" aria-hidden="true" onlick="nav_control()"></i>
         </div>
       </div>
     </div>
+    <script>
+      const nav_icon = document.querySelector('.nav_icon');
+      console.log(nav_icon);
 
+      nav_icon.addEventListener('click', nav_control);
+
+      function nav_control(){
+        const nav = document.querySelector('.nav');
+        const connect = document.querySelector('.connect');
+        console.log(nav, connect);
+        nav.classList.add('nav_active');
+        connect.classList.add('nav_active');
+      }
+
+
+    </script>
     <div class="header">
       <div class="title">
         <h1>
