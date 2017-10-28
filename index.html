@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>
+    function back_list(){
+      var check = document.getElementsByClassName('menu-button-checkbox')[0];
+      console.log(check);
+      check.checked = false;
+    }
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>index</title>
   <link rel="stylesheet" href="typicons.min.css">
-</head>
+
   <style>
     @font-face {
     font-family: 'typicons';
@@ -378,10 +385,10 @@
         <div class="nav">
           <div class="logo"></div>
           <ul class="navation">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#skill">Skill</a></li>
-            <li><a href="#person">Personality</a></li>
-            <li><a href="#learn">Learning</a></li>
+            <li onclick="back_list()"><a href="#home">Home</a></li>
+            <li onclick="back_list()"><a href="#skill">Skill</a></li>
+            <li onclick="back_list()"><a href="#person">Personality</a></li>
+            <li onclick="back_list()"><a href="#learn">Learning</a></li>
           </ul>
         </div>
     </div>

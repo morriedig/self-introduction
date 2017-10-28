@@ -1,3 +1,4 @@
+<<<<<<< HEAD
      ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
     '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
     |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
@@ -24,3 +25,8 @@ The Cloud9 IDE team
 
 Visit http://docs.c9.io for documentation, or http://support.c9.io for support.
 To watch some training videos, visit http://www.youtube.com/user/c9ide
+=======
+# self-introduction
+Personal Website
+https://morriedig.github.io/self-introduction/
+>>>>>>> ce24d5ad72c003183d38c01947178de7cc3ac9b0
