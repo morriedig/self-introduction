@@ -16,6 +16,7 @@
           <p>Huang</p>
         </div>
         <div class="nav">
+          <i class="fa fa-times close" aria-hidden="true"></i>
           <ul>
             <li>Home</li>
             <li>js game</li>
@@ -38,19 +39,18 @@
     </div>
     <script>
       const nav_icon = document.querySelector('.nav_icon');
-      console.log(nav_icon);
-
+      const close = document.querySelector('.close');
       nav_icon.addEventListener('click', nav_control);
+
+      close.addEventListener('click', nav_control);
 
       function nav_control(){
         const nav = document.querySelector('.nav');
         const connect = document.querySelector('.connect');
         console.log(nav, connect);
-        nav.classList.add('nav_active');
-        connect.classList.add('nav_active');
+        nav.classList.toggle('nav_active');
+        connect.classList.toggle('nav_active');
       }
-
-
     </script>
     <div class="header">
       <div class="title">
@@ -64,34 +64,95 @@
     </div>
 
     <div class="block">
-      <div class="block1">
+      <div class="block1 block_active">
         <div>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, nemo maiores omnis non unde placeat quod quo sit laudantium ipsa beatae, blanditiis. Aut ipsa, facere obcaecati aliquid nobis maxime! Sint.</p>
         </div>
       </div>
-      <div class="block2">
+      <div class="block2 block_active">
         <div>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, nemo maiores omnis non unde placeat quod quo sit laudantium ipsa beatae, blanditiis. Aut ipsa, facere obcaecati aliquid nobis maxime! Sint.</p>
         </div>
       </div>
-      <div class="block3">
+      <div class="block3 block_active">
         <div>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, nemo maiores omnis non unde placeat quod quo sit laudantium ipsa beatae, blanditiis. Aut ipsa, facere obcaecati aliquid nobis maxime! Sint.</p>
         </div>
       </div>
-
       <div class="block_control">
-        
           <i class="fa fa-chevron-left left" aria-hidden="true"></i>
           <div class="control_center">
-            <i class="fa fa-circle dot dot1" aria-hidden="true"></i>
+            <i class="fa fa-circle dot dot1 dot_active" aria-hidden="true"></i>
             <i class="fa fa-circle dot dot2" aria-hidden="true"></i>
             <i class="fa fa-circle dot dot3" aria-hidden="true"></i>
           </div>
           <i class="fa fa-chevron-right right" aria-hidden="true"></i>
-        
       </div>
     </div>
+
+    <style>
+      :root{
+        --distance1:0;
+        --distance2:100%;
+        --distance3:200%;
+      }
+
+      .block1{
+        transform: translateX(var(--distance1));
+      }
+      .block2{
+        transform: translateX(var(--distance2));
+      }
+      .block3{
+        transform: translateX(var(--distance3));
+      }
+    </style>
+    <script>
+      const left = document.querySelector('.left');
+      const right = document.querySelector('.right');
+      let n = 1;
+
+      right.addEventListener('click', ()=>{
+        if(n==1){
+          const dot = document.querySelectorAll('.dot');
+          document.documentElement.style.setProperty('--distance1', '-100%');
+          document.documentElement.style.setProperty('--distance2', '0');
+          document.documentElement.style.setProperty('--distance3', '100%');
+          n = 2;
+          console.log(dot);
+          dot[1].classList.add('dot_active');
+          dot[0].classList.remove('dot_active');
+        } else if(n == 2){
+          const dot = document.querySelectorAll('.dot');
+          document.documentElement.style.setProperty('--distance1', '-200%');
+          document.documentElement.style.setProperty('--distance2', '-100%');
+          document.documentElement.style.setProperty('--distance3', '0');
+          dot[2].classList.add('dot_active');
+          dot[1].classList.remove('dot_active');
+          n = 3; 
+        }
+      })
+      left.addEventListener('click', ()=>{
+        if(n==2){
+          const dot = document.querySelectorAll('.dot');
+          document.documentElement.style.setProperty('--distance1', '0');
+          document.documentElement.style.setProperty('--distance2', '100%');
+          document.documentElement.style.setProperty('--distance3', '200%');
+          n = 1;
+          dot[0].classList.add('dot_active');
+          dot[1].classList.remove('dot_active');
+        } else if(n == 3){
+          const dot = document.querySelectorAll('.dot');
+          document.documentElement.style.setProperty('--distance1', '-100%');
+          document.documentElement.style.setProperty('--distance2', '0');
+          document.documentElement.style.setProperty('--distance3', '100%');
+          dot[1].classList.add('dot_active');
+          dot[2].classList.remove('dot_active');
+          n = 2;          
+        }
+      })
+
+    </script>
 
     <div class="center">
       <div class="center_top">
@@ -182,7 +243,6 @@
         <script>
           const inputs = document.querySelectorAll('input');
           const fires = document.querySelectorAll('.fire');
-          console.log(inputs);
 
           function control(){
             const suffix = this.dataset.sizing || '';
