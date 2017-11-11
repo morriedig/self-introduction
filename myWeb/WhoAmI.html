@@ -14,14 +14,14 @@
         <div class="logo">
           <i class="fa fa-address-card" aria-hidden="true"></i>
           <p>Huang</p>
-        </div>
+        </div>  
         <div class="nav">
           <i class="fa fa-times close" aria-hidden="true"></i>
           <ul>
             <li>Home</li>
-            <li>js game</li>
-            <li>Nothing</li>
-            <li>Nothing</li>
+            <li>game</li>
+            <li>Nothi</li>
+            <li>Nothi</li>
           </ul>
         </div>
         <div class="connect">
@@ -59,11 +59,21 @@
         </h1>
       </div>
       <div class="arrow">
-        <i class="fa fa-arrow-down" aria-hidden="true"></i>
-      </div>
+        <i class="fa fa-arrow-down" aria-hidden="true"><a href="#here"></a></i>
+      </div>  
+      <script>
+        const arrow = document.querySelector('.arrow');
+        arrow.addEventListener('click', ()=>{
+          const block = document.querySelector('.block');
+          const nav = document.querySelector('.nav');
+          // block.offsetTop -nav.offsetHeight;
+          window.scrollTo(0,block.offsetTop -nav.offsetHeight);
+        })
+      </script>
+
     </div>
 
-    <div class="block">
+    <div class="block" id="here">
       <div class="block1 block_active">
         <div>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, nemo maiores omnis non unde placeat quod quo sit laudantium ipsa beatae, blanditiis. Aut ipsa, facere obcaecati aliquid nobis maxime! Sint.</p>
