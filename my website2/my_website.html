@@ -73,5 +73,101 @@
 
     </div>
   </div>
+
+  <div class="body2">
+    <div class="left">
+      <div class="left_top">
+        <div class="nav">
+          <a href="#">Home</a>
+          <a href="#">Introduction</a>
+          <a href="#">Skill</a>
+          <a href="#">Personality</a>
+          <a href="#">History</a>
+        </div>
+      </div>
+
+      <div class="left_bot">
+        <h1>This is <br>Huang</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur <br> adipisicing elit. Laborum, placeat.</p>
+      </div>
+    </div>
+  
+    <div class="center">
+      <h2>Lorem.</h2>
+    </div>
+
+    <div class="right">
+      <div class="connect">
+        <i class="fa fa-angle-double-left connect_btn2" aria-hidden="true"></i>
+        <div>
+          <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <script>
+        const connect_btn2 = document.querySelector('.connect_btn2');
+        const body2 = document.querySelector('.body2');
+        const connect2 = body2.querySelector('.connect');
+        connect_btn2.addEventListener('mouseover', ()=>{
+          connect2.style.transform = "translateX(0)";
+          connect_btn2.style.display = "none";
+          connect2.addEventListener('mouseleave',()=>{
+            connect_btn2.style.display = "block";
+            connect2.style.transform = "translateX(86%)";
+          })
+        })
+        
+
+      </script>
+    </div>
+  </div>
+
+  <div class="body3">
+    <div class="top">
+      <h1>
+        HUANG
+      </h1>
+      <div class="navigation">
+        <i class="fa fa-bars nav_btn" aria-hidden="true"></i>
+        <div class="navbar">
+          <a href="#">Home</a>
+          <a href="#">Introduction</a>
+          <a href="#">Skill</a>
+          <a href="#">Personality</a>
+          <a href="#">History</a>
+          
+          <div class="connect3">
+            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+          </div>          
+        </div>
+
+        <script>
+          const nav_btn = document.querySelector('.nav_btn');
+
+          nav_btn.addEventListener('click', ()=>{
+            const navbar = document.querySelector('.navbar');
+            navbar.style.transform = "translateX(0)";
+            navbar.addEventListener('mouseleave',()=>{
+              navbar.style.transform = "translateX(100%)";
+            })
+          })
+        </script>        
+      </div>
+    </div>
+
+    <div class="bot">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, illum.
+      </p>
+
+    </div>
+  </div>
+
 </body>
 </html>

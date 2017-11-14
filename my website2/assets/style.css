@@ -7,10 +7,11 @@ ul{
 }
 a{
   text-decoration: none;
+  color:#fff;
 }
 
 /*body1*/
-  .body1{
+  .body1, .body2{
     background: url(image/bg3.jpg) center;
     background-size: cover;
     height: 100vh;
@@ -29,25 +30,26 @@ a{
     letter-spacing: 0.103em;
     color:#bcbcbc;
   }
-  .left_bot{
+  .body1 .left_bot{
     position: fixed;
     display: flex;
     text-align: center;
+    z-index: 1; 
   }
-  .left_bot i{
+  .body1 .left_bot i{
     display: block;
     margin-left: 0;
-    padding-left: 0;
+    padding-left: 5px;
     vertical-align: middle;
     opacity: 0.6;
     background: #fff;
     color:#858a91;
     transition: all 0.3s;
   }
-  .left_bot i:last-child{
+  .body1 .left_bot i:last-child{
     border-left:1px solid #858a91; 
   }
-  .left_bot i:hover{
+  .body1 .left_bot i:hover{
     color:#4f5072;
     opacity: 0.8;
     cursor: pointer;
@@ -145,7 +147,7 @@ a{
       color:#bcbcbc;
     }
     .left_bot{
-      left:100px;
+      left:50px;
       bottom: 50px;
     }
     .left_bot i{
@@ -259,4 +261,350 @@ a{
     }
   }
 
+/*body2*/
+  .body2{
+    position: relative;
+  }
+  .body2 .left{
+    flex:2;
+    margin:0 10px;
+  }
+  .body2 .left .left_top{
+    padding-bottom: 20px;
+    border-bottom: 1px solid #fff;
+    font-size: 1em;
+    margin-top: 10vh;
+    text-align: center;
+  }
+  .body2 .left .left_top a{
+    display: inline-block;
+    width:98px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    letter-spacing: 0.05em;
+    border:1px solid #fff;
+    border-radius:10px;
+    transition: all 0.3s;
+  }
+  .body2 .left .left_top a:hover{
+    color:#4f5072;
+    background: #fff;
+    font-weight: bolder;
+    border:1px solid #4f5072;
+    text-shadow: 0 3px 3px 3px black;
+  }
+  .body2 .left .left_bot{
+    margin:30px 20px;
+  }
+  .body2 .left .left_bot h1{
+    font-size: 4em;
+    letter-spacing: 0.105em;
+  }
+  .body2 .left .left_bot p{
+    font-size: 1em;
+    line-height: 1.5em;
+    letter-spacing: 0.103em;
+    color:#bcbcbc;
+  }
+  .body2 .center{
+    flex:1;
+    text-align: center;
+    font-size: 1.5em;
+  }
+  .body2 .center h2{
+    margin-top: 16vh;
+    letter-spacing: 0.105em;
+  }
+  .body2 .right{
+    flex:2;
+    font-size: 2em;
+  }
+  .body2 .connect{
+    border-bottom:1px solid #fff;
+    margin:10vh 10px;
+  }
+  .body2 .connect .connect_btn2{
+    display: none;
+  }
+  .body2 .connect div{
+    display: flex;
+    line-height: 2em;
+    justify-content: space-around;
+    margin-bottom:10px;
+  }
+  .body2 .connect div a{
+    color:#bcbcbc;
+    transition: all 0.3s;
+    background:#fff;
+    opacity: 0.6;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 1.8em;
+    border-radius:15px;
+  }
+  .body2 .connect div a:hover{
+    color:#fff;
+    opacity: 0.9;
+    background: #858a91;
+  }
+  @media screen and (max-width: 1250px) and (min-width:771px){
+    .body2 .center{
+      display: none;
+    }
+    .body2 .connect .connect_btn2{
+      display: none;
+    }
+    .body2 .right{
+      flex:1 !important;
+      font-size: 1.4em;
+    }
+    .body2 .right .connect a{
+      width: 40px;
+      height: 40px;
+    }
+    .body2 .left{
+      flex:3 !important;
+    }
+    .body2 .left .left_top{
+      margin-top: 8.5vh;
+    }
+    .body2 .left .left_top  .nav{
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+  @media screen and (max-width: 770px) and (min-width: 501px){
+    .body2 .right{
+      position: absolute;
+      bottom: 10px;
+      right:0;
+    }
+    .body2 .right .connect_btn2{
+      display: block;
+      font-size: 1em;
+      background:#fff;
+      opacity: 0.6;
+      color:#bcbcbc;
+      height: 38px;
+      width: 25px;
+      text-align: center;
+      line-height: 1.2em;
+      border-radius: 5px 0 0 5px;
+    }
+    .body2 .right .connect{
+      display: flex;
+      border-bottom: none;
+      margin: 0;
+      padding: 0;
+      transform: translateX(86%);
+    }
+    .body2 .right .connect a{
+      font-size:0.8em;
+      width:38px;
+      height: 38px;
+      padding: 0;
+    }
+    .body2 .center{
+      display: none;
+    }
+    .body2 .left .left_top{
+      margin-top: 8.5vh;
+    }
+    .body2 .left .left_top  .nav{
+      display: flex;
+      justify-content: space-around;
+      font-size: 0.8em;
+    }
+    .body2 .left .left_top a{
+      width:75px !important;
+    }
+    .body2 .left .left_bot h1{
+      font-size: 3em;
+    }
+  }
+  @media screen and (max-width: 500px){
 
+    .body2 .right{
+      position: absolute;
+      bottom: 10px;
+      right:0;
+    }
+    .body2 .right .connect_btn2{
+      display: block;
+      font-size: 1em;
+      background:#fff;
+      opacity: 0.6;
+      color:#bcbcbc;
+      height: 38px;
+      width: 25px;
+      text-align: center;
+      line-height: 1.2em;
+      border-radius: 5px 0 0 5px;
+    }
+    .body2 .right .connect{
+      display: flex;
+      border-bottom: none;
+      margin: 0;
+      padding: 0;
+      transform: translateX(86%);
+    }
+    .body2 .right .connect a{
+      font-size:0.8em;
+      width:38px;
+      height: 38px;
+      padding: 0;
+    }
+    .body2 .center{
+      display: none;
+    }
+    .body2 .left{
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .body2 .left .left_bot{
+      flex:1;
+    }
+    .body2 .left .left_bot h1{
+      font-size: 1.8em;
+    }
+    .body2 .left .left_bot p{
+      font-size: 0.8em;
+    }
+    .body2 .left .left_top{
+      flex:3;
+      border:none;
+    }
+    .body2 .left .left_top .nav{
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+    .body2 .left .left_top .nav a{
+      border:none;
+      line-height: 1.5em;
+    }
+    .body2 .left .left_top a:after{
+      content: "";
+      display: block;
+      border:1px solid #bcbcbc;
+    }
+  }
+
+/*body3*/
+  .body3{
+    background: url(image/bg3.jpg) center;
+    background-size: cover;
+    height: 100vh;
+    width:100%;
+    color: #fff;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
+  }
+  .body3 .top{
+    flex:6;
+    display: flex;
+    justify-content: space-between;
+    margin:30px 30px 0 30px;
+  }
+  .body3 .top h1{
+    font-size: 5em;
+    letter-spacing: 0.12em;
+  }
+  .body3 .navigation{
+    display: flex;
+  }
+  .body3 .navigation i{
+    display: block;
+    font-size: 2.5em;
+    color:#bcbcbc;
+    opacity:0.7;
+  }
+  .body3 .navigation i:hover{
+    cursor: pointer;
+  }
+  .body3 .navigation .navbar{
+    background: #fff;
+    position: absolute;
+    height: 100vh;
+    margin-top: -30px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 15px;
+    background: #a5a5a5;
+    transition: all 0.5s;
+    transform: translateX(100%);
+  }
+  .body3 .navigation .navbar >  a{
+    color:#858a91;
+    font-size:1.5em;
+    margin-bottom: 15px;
+    line-height: 1.8em;
+  }
+  .body3 .navigation .navbar > a:after{
+    content: "";
+    display: block;
+    border: 1px solid #bcbcbc;
+  }
+  .body3 .navigation .navbar .connect3{
+    display: flex;
+    font-size: 0.5em;
+    justify-content: space-between;
+  }
+  .body3 .navigation .navbar .connect3 > a{
+    color:black !important;
+  }
+  .body3 .navigation .navbar a:hover{
+    color:#1d1949;
+    font-weight: bolder;
+  }
+  .body3 .bot{
+    flex:1;
+    text-align: center;
+    font-size: 2em;
+    color:#4f5072;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0.7;
+  }
+  @media screen and (min-width: 501px){
+    .body3 .top h1{
+      font-size: 5em;
+      letter-spacing: 0.12em;
+    }  
+    .body3 .navigation i{
+      font-size: 2.5em;
+    }
+
+    .body3 .navigation .navbar >  a{
+      font-size:1.5em;
+      line-height: 1.8em;
+    }
+
+    .body3 .bot{
+      font-size: 2em;
+    }
+  }
+  @media screen and (max-width: 500px){
+    .body3 .top h1{
+      font-size: 3em;
+      letter-spacing: 0.12em;
+    }  
+    .body3 .navigation i{
+      font-size: 2em;
+    }
+
+    .body3 .navigation .navbar >  a{
+      font-size:1.5em;
+      line-height: 1.8em;
+    }
+
+    .body3 .bot{
+      font-size: 1em;
+    }
+  }
